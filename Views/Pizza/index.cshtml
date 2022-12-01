@@ -21,23 +21,33 @@ else
             {
                 <tr>
                     <td><a href="@Url.Action("Detail",new {id = pizza.Id})">@pizza.Id</a></td>
+
+                    @*Title*@
                     <td class="title">@pizza.Name</td>
+
+                    @*Description*@
                     <td class="description">
                         @pizza.Description
                     </td>
+
+                    @*Image*@
                     <td class="image">
                         <img class="post-list-image" src="@pizza.Image" alt="pizza" width="600" height="300">
                     </td>
+
+                    @*Price*@
                     <td class="price">
                         @pizza.Price euro
                     </td>
                     <td>
+                        @*Details button*@
                         <a class="btn btn-info" asp-area="" asp-controller="Pizza" asp-action="Details" asp-route-id="@pizza.Id">Dettagli</a>
+
+                         @*Update button*@
+                        <a class="m-2 btn btn-warning" asp-area="" asp-controller="Pizza" asp-action="Update" asp-route-id="@pizza.Id">Modifica</a>
                     </td>
                 </tr>
             }
         </tbody>
     </table>
-}
-
 }
